@@ -643,6 +643,8 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
+
+
 @media (max-width : 780px){
   .contact-container{
     overflow: visible;
@@ -682,7 +684,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 @media (max-width : 480px){
+  .contact-container{
+    height: 95vh;
+  }
   .contact-container .contact-content-container .right .form{
     width: 100%;
   }
+
 }
