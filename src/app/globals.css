@@ -297,7 +297,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
-    padding: 0px 2vw;
+    padding: 2vh 2vw;
   }
 
   .hero-container .right {
@@ -452,7 +452,8 @@ body {
 
 @media (max-width: 780px) {
   .about-container{
-    padding: 0vh 2vw;
+    padding: 2vh 2vw;
+    height: auto;
   }
   .about-content-container{
     flex-direction: column;
@@ -479,10 +480,13 @@ body {
   .about-content-container .right .text p{
     text-align: center;
     font-size: 1.1rem;
+    margin: 2vh 0vw;
   }
 
   .about-content-container .right .text h1{
     text-align: center;
+    width: 100%;
+    margin: 2vh 0vw;
   }
 }
 
@@ -642,6 +646,7 @@ input[type="number"]::-webkit-inner-spin-button {
 @media (max-width : 780px){
   .contact-container{
     overflow: visible;
+    height: 85vh;
   }
   
   .contact-content-container{
@@ -653,7 +658,8 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
     width: 100%;
     text-align: right;
-    height: 60%;
+    height: auto;
+    padding-top: 5vh;
   }
 
   .contact-container .contact-content-container .right{
@@ -662,6 +668,8 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
     width: 100%;
     text-align: right;
+    height: auto;
+    padding-top: 5vh;
   }
   .contact-container .contact-content-container .right .form{
     width: 70%;
