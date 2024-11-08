@@ -95,7 +95,7 @@ body {
 
 .header-container .menu-button .menu-icon {
   width: 2vw;
-  height: 8vh;
+  height: 6vh;
   color: white;
 }
 
@@ -113,7 +113,7 @@ body {
   align-items: flex-start;
   flex-direction: column;
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 2vh 2vw;
+  padding: 2vh 4vw;
 }
 
 .sidebar.visible {
@@ -121,11 +121,10 @@ body {
 }
 
 .sidebar .link {
-  margin-top: 20px;
+  margin-top: 25px;
   width: 100%;
   animation: 1s ease navbar-loading-items;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.7rem;
   color: white;
 }
 
@@ -148,15 +147,6 @@ body {
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 
 @media only screen and (max-width: 1050px) {
   .header-container {
@@ -185,7 +175,7 @@ body {
 
   .header-container .menu-button .menu-icon {
     height: 9vh;
-    width: 9vw;
+    width: 7vw;
   }
 }
 
@@ -350,18 +340,22 @@ body {
 
 @keyframes moveInRight {
   0%{
+    opacity: 0;
     transform: translateX(100%);
   }
   100%{
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes moveInLeft {
   0%{
+    opacity: 0;
     transform: translateX(-100%);
   }
   100%{
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -525,6 +519,7 @@ body {
   font-size: 2.5rem;
   text-align: center;
   border-bottom: 1px solid white;
+  animation: 1s ease navbar-loading-items;
 }
 
 .contact-container .contact-content-container{
@@ -537,10 +532,11 @@ body {
   width: 40%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   padding: 30vh 0vw;
+  animation: 1s ease moveInLeft;
 }
 
 .contact-container .contact-content-container .left .utility{
@@ -562,6 +558,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: 1s ease moveInRight;
 }
 .contact-container .contact-content-container .right .form{
   width: 100%;
@@ -636,3 +633,48 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 700;
 }
 
+@media (max-width : 1024px) {
+  .contact-container{
+    padding: 5vh 3vw;
+  }
+}
+
+@media (max-width : 780px){
+  .contact-container{
+    overflow: visible;
+  }
+  
+  .contact-content-container{
+    flex-direction: column;
+  }
+  .contact-container .contact-content-container .left{
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: right;
+    height: 60%;
+  }
+
+  .contact-container .contact-content-container .right{
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: right;
+  }
+  .contact-container .contact-content-container .right .form{
+    width: 70%;
+  }
+  .footer-container{
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media (max-width : 480px){
+  .contact-container .contact-content-container .right .form{
+    width: 100%;
+  }
+}

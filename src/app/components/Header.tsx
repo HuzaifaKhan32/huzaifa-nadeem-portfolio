@@ -12,11 +12,19 @@ const Header = () => {
     const scrollToSection = (sectionId: string) => {
         const element = document.querySelector(sectionId) as HTMLElement;
 
-        if(element){
+        if (element && window.innerWidth > 912) {
             window.scrollTo({
-                top : element.offsetTop,
-                behavior : "smooth"
+                top: element.offsetTop,
+                behavior: "smooth"
             })
+        }
+
+        else {
+            window.scrollTo({
+                top: element.offsetTop,
+                behavior: "smooth"
+            })
+            handleSidebarVisibility();
         }
     }
     const [visibility, setVisibility] = useState<boolean>(false);
@@ -24,12 +32,6 @@ const Header = () => {
     const handleSidebarVisibility = () => {
         setVisibility(!visibility);
     }
-
-    // const [activeness, setActiveness] = useState<null | number>(null);
-
-    // const handleClick = (buttonIndex : number) => {
-    //     setActiveness(buttonIndex);
-    // }
 
     return (
         <div className="header-container">
@@ -50,22 +52,22 @@ const Header = () => {
             </div>
             <div className={`sidebar ${visibility ? "visible" : ""}`}>
                 <div className="cross-button">
-                <FontAwesomeIcon icon={faXmark} onClick={handleSidebarVisibility} className="cross-icon"/>
+                    <FontAwesomeIcon icon={faXmark} onClick={handleSidebarVisibility} className="cross-icon" />
                 </div>
                 <Link href={"/"} className="link">Home</Link>
-                <Link href={"/"} className="change link">About Me</Link>
+                <Link href={"/"} className=" link" onClick={() => scrollToSection(".about-container")}>About Me</Link>
+                <Link href={"/"} className="link" onClick={() => scrollToSection(".contact-container")}>Contact</Link>
                 <Link href={"/"} className="link">Service</Link>
                 <Link href={"/"} className="link">Skills</Link>
                 <Link href={"/"} className="link">Portfolio</Link>
-                <Link href={"/"} className="link">Contact</Link>
                 <Link href={"/"} className="link">Hire Me</Link>
             </div>
             <div className="hire-button">
                 <button>Hire Me</button>
             </div>
             <div className="menu-button show-sidebar">
-                <FontAwesomeIcon icon={faBars}  className="menu-icon" onClick={handleSidebarVisibility}/>
-                
+                <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={handleSidebarVisibility} />
+
             </div>
         </div>
     )
