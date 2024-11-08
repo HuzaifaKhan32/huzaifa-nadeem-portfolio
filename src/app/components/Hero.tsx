@@ -7,7 +7,7 @@ const Hero = () => {
                 <div className="text1 center">Hi, it&apos;s me</div>
                 <div className="text2 center">Huzaifa Khan</div>
                 <div className="text3 center">And I &apos;m a <span>Frontend Developer</span></div>
-                <p className="center">I am a passionate front-end web developer skilled in creating user-friendly and visually appealing websites using HTML, CSS, and JavaScript. I strive to deliver high-quality, responsive designs that enhance user experience.</p>
+                <p className="center">I am a passionate front-end web developer skilled in creating user-friendly and visually appealing websites using HTML&lsquo; CSS&lsquo; and JavaScript. I strive to deliver high-quality&lsquo; responsive designs that enhance user experience.</p>
                 </div>
                 <div className="social-links">
                     <Link href={"https://www.linkedin.com/in/huzaifa-khan-b6bb76308/"} target="_blank"><div className="linkedIn"></div></Link>
