@@ -297,7 +297,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
-    padding: 2vh 2vw;
+    padding: 5vh 2vw;
   }
 
   .hero-container .right {
@@ -452,7 +452,7 @@ body {
 
 @media (max-width: 780px) {
   .about-container{
-    padding: 2vh 2vw;
+    padding: 5vh 2vw;
     height: auto;
   }
   .about-content-container{

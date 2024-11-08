@@ -54,7 +54,7 @@ const Header = () => {
                 <div className="cross-button">
                     <FontAwesomeIcon icon={faXmark} onClick={handleSidebarVisibility} className="cross-icon" />
                 </div>
-                <Link href={"/"} className="link">Home</Link>
+                <Link href={"/"} className="link" onClick={() => scrollToSection(".hero-container")}>Home</Link>
                 <Link href={"/"} className=" link" onClick={() => scrollToSection(".about-container")}>About Me</Link>
                 <Link href={"/"} className="link" onClick={() => scrollToSection(".contact-container")}>Contact</Link>
                 <Link href={"/"} className="link">Service</Link>
